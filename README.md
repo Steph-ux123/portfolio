@@ -1,2 +1,2 @@
 # Portfolio
-Portfolio for potential employers. This file is meant to display the key aspects of the projects I've worked on
+Portfolio for potential employers. This file is meant to display the key aspects of the projects I've worked on. The UVM testbench is currently a work in progress.
