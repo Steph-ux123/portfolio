@@ -1,0 +1,264 @@
+
+*** Running vivado
+    with args -log ConvWindDesign1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ConvWindDesign1.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1.1 (64-bit)
+  **** SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
+  **** IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+  **** SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ConvWindDesign1.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 448.969 ; gain = 165.340
+Command: synth_design -top ConvWindDesign1 -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9032
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 887.094 ; gain = 414.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ConvWindDesign1' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'LineBuffer' [C:/Users/ikay2/Documents/ML Accelerator/Line_Buffer/Line_Buffer.srcs/sources_1/new/LineBuffer.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'LineBuffer' (0#1) [C:/Users/ikay2/Documents/ML Accelerator/Line_Buffer/Line_Buffer.srcs/sources_1/new/LineBuffer.sv:23]
+WARNING: [Synth 8-7071] port 'empty_reg' of module 'LineBuffer' is unconnected for instance 'L1' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:52]
+WARNING: [Synth 8-7071] port 'full_reg' of module 'LineBuffer' is unconnected for instance 'L1' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:52]
+WARNING: [Synth 8-7023] instance 'L1' of module 'LineBuffer' has 8 connections declared, but only 6 given [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:52]
+WARNING: [Synth 8-7071] port 'empty_reg' of module 'LineBuffer' is unconnected for instance 'L2' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:60]
+WARNING: [Synth 8-7071] port 'full_reg' of module 'LineBuffer' is unconnected for instance 'L2' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:60]
+WARNING: [Synth 8-7023] instance 'L2' of module 'LineBuffer' has 8 connections declared, but only 6 given [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:60]
+WARNING: [Synth 8-7071] port 'empty_reg' of module 'LineBuffer' is unconnected for instance 'L3' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:68]
+WARNING: [Synth 8-7071] port 'full_reg' of module 'LineBuffer' is unconnected for instance 'L3' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:68]
+WARNING: [Synth 8-7023] instance 'L3' of module 'LineBuffer' has 8 connections declared, but only 6 given [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:68]
+INFO: [Synth 8-6157] synthesizing module 'Conv_Window_Reg' [C:/Users/ikay2/Documents/ML Accelerator/ConvWindowRegister/ConvWindowRegister.srcs/sources_1/new/Conv_Window_Reg.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Conv_Window_Reg' (0#1) [C:/Users/ikay2/Documents/ML Accelerator/ConvWindowRegister/ConvWindowRegister.srcs/sources_1/new/Conv_Window_Reg.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ConvWindDesign1' (0#1) [C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.srcs/sources_1/new/ConvWindDesign1.sv:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 978.188 ; gain = 505.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 978.188 ; gain = 505.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 978.188 ; gain = 505.367
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 978.188 ; gain = 505.367
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 6     
++---Registers : 
+	                8 Bit    Registers := 12    
+	                7 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
++---RAMs : 
+	               80 Bit	(10 X 8 bit)          RAMs := 3     
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 9     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++----------------+---------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object    | Inference | Size (Depth x Width) | Primitives  | 
++----------------+---------------+-----------+----------------------+-------------+
+|ConvWindDesign1 | L1/memory_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|ConvWindDesign1 | L2/memory_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|ConvWindDesign1 | L3/memory_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++----------------+---------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++----------------+---------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object    | Inference | Size (Depth x Width) | Primitives  | 
++----------------+---------------+-----------+----------------------+-------------+
+|ConvWindDesign1 | L1/memory_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|ConvWindDesign1 | L2/memory_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|ConvWindDesign1 | L3/memory_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++----------------+---------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     6|
+|3     |LUT1     |    15|
+|4     |LUT2     |    15|
+|5     |LUT3     |     9|
+|6     |LUT4     |    27|
+|7     |LUT5     |     6|
+|8     |RAM32M   |     3|
+|9     |RAM32X1D |     6|
+|10    |FDCE     |    81|
+|11    |FDRE     |    72|
+|12    |IBUF     |    17|
+|13    |OBUF     |    72|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |   330|
+|2     |  L1     |LineBuffer        |    56|
+|3     |  L2     |LineBuffer_0      |    56|
+|4     |  L3     |LineBuffer_1      |    56|
+|5     |  W1     |Conv_Window_Reg   |     8|
+|6     |  W2     |Conv_Window_Reg_2 |     8|
+|7     |  W3     |Conv_Window_Reg_3 |     8|
+|8     |  W4     |Conv_Window_Reg_4 |     8|
+|9     |  W5     |Conv_Window_Reg_5 |     8|
+|10    |  W6     |Conv_Window_Reg_6 |     8|
+|11    |  W7     |Conv_Window_Reg_7 |     8|
+|12    |  W8     |Conv_Window_Reg_8 |     8|
+|13    |  W9     |Conv_Window_Reg_9 |     8|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.527 ; gain = 697.707
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1179.371 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1274.402 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+
+Synth Design complete | Checksum: 7b2bf90c
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1274.402 ; gain = 825.434
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ikay2/Documents/ML Accelerator/ConvWindDesign1/ConvWindDesign1.runs/synth_1/ConvWindDesign1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ConvWindDesign1_utilization_synth.rpt -pb ConvWindDesign1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 21 16:20:46 2024...

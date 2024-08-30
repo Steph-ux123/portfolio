@@ -1,0 +1,93 @@
+// setting up a bunch of ports and connections
+module LineBuffer_tb();
+parameter DATA_WIDTH=8;
+parameter DEPTH=8;
+parameter PTR_SIZE=4;
+
+reg clk;
+reg reset;
+reg write_en;
+reg read_en;
+reg [DATA_WIDTH-1:0] data_in;
+wire [DATA_WIDTH-1:0] data_out;
+wire full_reg;
+wire empty_reg;
+
+// this is the wiring connecting to the device we made
+LineBuffer dut(
+.clk(clk),
+.reset(reset),
+.write_en(write_en),
+.read_en(read_en),
+.data_in(data_in),
+.data_out(data_out),
+.full_reg(full_reg),
+.empty_reg(empty_reg)
+);
+
+initial
+    begin
+        
+        reset <= 1;
+        #10;
+        reset <= 0;
+        #10;
+        write_en <=1;
+        data_in <=8'b0000000;//input 1
+        $monitor($time, "wr_ptr='h%x",dut.wr_ptr);
+        $monitor($time,"full_reg='h%x",dut.full_reg);
+        #10;
+        data_in <=8'b11111111;//input 2
+        #10;
+        data_in <=8'b10000000;//input 3
+        #10;
+        data_in <=8'b01000000;//input 4
+        #10;
+        data_in <=8'b00100000;//input 5
+        #10;
+        data_in <=8'b00010000;//input 6
+        #10;
+        data_in <=8'b00001000;// input 7
+        #10;
+        data_in <=8'b00000100;//input 8
+        #10;
+        data_in <=8'b0000000;//input 9
+        #10;
+        data_in <=8'b11111111;//input 10
+        #10;
+        read_en <=1;
+        #10;
+        data_in <=8'b10000000;//input 11
+        #10;
+        data_in <=8'b01000000;//input 12
+        #10;
+        data_in <=8'b00100000;//input 13
+        #10;
+        data_in <=8'b00010000;//input 14
+        #10;
+        data_in <=8'b00001000;// input 15
+        #10;
+        data_in <=8'b00000100;//input 16
+        #10;
+        data_in <=8'b11111111;//input 17
+        #10;
+        data_in <=8'b10000000;//input 18
+        #10;
+        data_in <=8'b01000000;//input 19
+        #10;
+        data_in <=8'b00100000;//input 20
+        
+        
+    end
+    
+// clock generation
+always
+    begin
+        clk <=1;
+        #5;
+        clk <=0;
+        #5;
+    end 
+
+
+endmodule
